@@ -1,0 +1,22 @@
+﻿body 
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigation
+{
+    background-color: black;
+    top: 0px;
+    height: 100px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#google-map
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
