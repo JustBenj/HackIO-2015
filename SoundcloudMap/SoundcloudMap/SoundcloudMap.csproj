@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="GoogleMap.js" />
     <Content Include="packages.config" />
+    <Content Include="README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -78,6 +79,7 @@
   <ItemGroup>
     <Content Include="Index.html" />
     <Content Include="Master.css" />
+    <Content Include="SoundCloudData.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

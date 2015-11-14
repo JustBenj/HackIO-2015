@@ -1,7 +1,16 @@
 ﻿body 
 {
+    height: 100%;
     margin: 0px;
     padding: 0px;
+}
+
+#google-map
+{
+    position: absolute;
+    top: 100px;
+    bottom: 0px;
+    width: 100%;
 }
 
 #navigation
@@ -13,10 +22,3 @@
     padding: 0px;
 }
 
-#google-map
-{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
