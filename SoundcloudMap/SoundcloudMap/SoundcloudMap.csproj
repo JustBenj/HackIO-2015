@@ -80,6 +80,8 @@
     <Content Include="bin\SoundcloudMap.dll" />
     <Content Include="bin\SoundcloudMap.pdb" />
     <Content Include="GoogleMap.js" />
+    <Content Include="Images\Logo.fw.png" />
+    <Content Include="Images\NavBg.fw.png" />
     <Content Include="packages.config" />
     <Content Include="README.md" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
@@ -105,6 +107,7 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

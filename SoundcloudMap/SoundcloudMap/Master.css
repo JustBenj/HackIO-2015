@@ -11,14 +11,21 @@
     top: 100px;
     bottom: 0px;
     width: 100%;
+    z-index: 1;
 }
 
 #navigation
 {
-    background-color: black;
+    position: absolute;
+    background-image: url("Images/NavBg.fw.png");
+    background-repeat: repeat-x;   
     top: 0px;
-    height: 100px;
+    left: 0;
+    right: 0;
+    height: 120px;
     margin-top: 0px;
     padding: 0px;
+    z-index: 2;
+    text-align: center;
 }
 

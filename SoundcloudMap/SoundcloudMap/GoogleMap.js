@@ -2,7 +2,7 @@
 
 var map;
 var geocoder = "http://api.geonames.org/cities?";
-var geocoderSuffix = "&lang=en&username=skyjamin";
+var geocoderSuffix = "&lang=en&username=skyjamin&style=full";
 var radius = 1;
 
 var currentLocation;
@@ -37,7 +37,7 @@ function geocodeByRadius(latLng, radius)
     var north = latLng.lat() + radius;
     var west = latLng.lng() - radius;
     var east = latLng.lng() + radius;
-    
+
     httpGetAsync(geocoder + "north=" + north + "&south=" + south + "&east=" + east + "&west=" + west + geocoderSuffix, processGeocode);
 }
 
@@ -50,10 +50,10 @@ function processGeocode(results)
 
     for (i = 0; i < count; i++)
     {
-        cities.push(xml.getElementsByTagName('name')[i].innerHTML);
+        cities.push(xml.getElementsByTagName('name')[i].innerHTML + " " + xml.getElementsByTagName('adminCode1')[i].innerHTML);
     }
     
-    cityData(cities);
+    console.log(cities);
 }
 
 function createMap(position) {
