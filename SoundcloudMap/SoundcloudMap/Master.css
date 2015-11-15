@@ -28,4 +28,86 @@
     z-index: 2;
     text-align: center;
 }
+#navigation ul {
+    list-style: none;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
 
+#navigation li {
+        height: 100px;
+        width: 200px;
+        padding: 0;
+        margin: auto;
+        display: inline-block;
+}
+
+#navigation li#settings
+{
+    background-repeat: no-repeat;
+    background-image: url(Images/Buttons/settings_idle.fw.png);
+    width: 200px;
+}
+
+#navigation li#settings:hover
+{
+    background-repeat: no-repeat;
+    background-image: url(Images/Buttons/settings_hover.fw.png);
+    width: 200px;
+}
+
+    #navigation li#settings ul {
+        padding: 0;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 150px;
+}
+
+#settings-drop
+{
+    position: relative;
+    z-index: 3;
+    top: 0;
+    width: 500px;
+    height: 100px;
+    background-color: grey;
+
+}
+
+#navigation li#info{
+    background-repeat: no-repeat;
+    background-image: url(Images/Buttons/about_idle.fw.png);
+    width: 200px;
+}
+
+#navigation li#info:hover
+{
+    background-repeat: no-repeat;
+    background-image: url(Images/Buttons/about_hover.fw.png);
+    width: 200px;
+}
+
+#navigation li#help{
+    background-repeat: no-repeat;
+    background-image: url(Images/Buttons/help_idle.fw.png);
+    width: 200px;
+}
+
+#navigation li#help:hover
+{
+    background-repeat: no-repeat;
+    background-image: url(Images/Buttons/help_hover.fw.png);
+    width: 200px;
+}
+
+
+#navigation li#logo
+{
+    background-repeat: no-repeat;
+    background-image: url("Images/Logo.fw.png");
+    width: 355px;
+}

@@ -4,6 +4,7 @@ var map;
 var geocoder = "http://api.geonames.org/cities?";
 var geocoderSuffix = "&lang=en&username=skyjamin&style=full";
 var radius = 1;
+var zoom = 18;
 
 var currentLocation;
 
@@ -64,7 +65,7 @@ function createMap(position) {
     map = new google.maps.Map(document.getElementById('google-map'),
     {
         center: currentPosLatLng,
-        zoom: 15,
+        zoom: zoom,
         disableDefaultUI: true
     });
 
