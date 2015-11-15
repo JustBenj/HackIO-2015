@@ -5,7 +5,6 @@ var geocoder = "http://api.geonames.org/cities?";
 var geocoderSuffix = "&lang=en&username=skyjamin";
 var radius = 1;
 
-var browserSupportGeolocation = new Boolean(false);
 var currentLocation;
 
 function initialization()
@@ -13,7 +12,7 @@ function initialization()
     //Check that browser supports geolocation
     if (navigator.geolocation)
     {
-        navigator.geolocation.getCurrentPosition(createMap, geolocationError());
+        navigator.geolocation.getCurrentPosition(createMap, geolocationError);
     }
     else
     {
@@ -48,14 +47,13 @@ function processGeocode(results)
     var xml = parser.parseFromString(results, "text/xml");
     var count = xml.childNodes[0].childElementCount;
     var cities = [];
-    console.log(xml);
 
-    for (var i = 0; i <= count; i++)
+    for (i = 0; i < count; i++)
     {
-        cities.push(xml.childNodes[0].childNodes[i].getElementsByTagName('name'));
+        cities.push(xml.getElementsByTagName('name')[i].innerHTML);
     }
-
-    console.log(cities);
+    
+    cityData(cities);
 }
 
 function createMap(position) {
@@ -76,4 +74,5 @@ function createMap(position) {
 function geolocationError()
 {
     //TODO: Implement
+    alert("Could not determine location. Please enter a location below.");
 }
