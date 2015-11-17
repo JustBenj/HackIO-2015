@@ -14,100 +14,83 @@
     z-index: 1;
 }
 
+/*Header Stuff*/
 #navigation
 {
     position: absolute;
     background-image: url("Images/NavBg.fw.png");
     background-repeat: repeat-x;   
     top: 0px;
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: 0px;
     height: 120px;
-    margin-top: 0px;
+    margin: 0px;
     padding: 0px;
     z-index: 2;
-    text-align: center;
 }
+
 #navigation ul {
     list-style: none;
-    height: 100px;
-    padding: 0;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
-    text-align: center;
+    height: 100px;
 }
 
 #navigation li {
-        height: 100px;
-        width: 200px;
-        padding: 0;
-        margin: auto;
-        display: inline-block;
+    height: 100px;
+    display: inline-block;
 }
 
 #navigation li#settings
 {
-    background-repeat: no-repeat;
     background-image: url(Images/Buttons/settings_idle.fw.png);
-    width: 200px;
 }
 
 #navigation li#settings:hover
 {
-    background-repeat: no-repeat;
     background-image: url(Images/Buttons/settings_hover.fw.png);
-    width: 200px;
-}
-
-    #navigation li#settings ul {
-        padding: 0;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        width: 150px;
-}
-
-#settings-drop
-{
-    position: relative;
-    z-index: 3;
-    top: 0;
-    width: 500px;
-    height: 100px;
-    background-color: grey;
-
 }
 
 #navigation li#info{
-    background-repeat: no-repeat;
     background-image: url(Images/Buttons/about_idle.fw.png);
-    width: 200px;
 }
 
 #navigation li#info:hover
 {
-    background-repeat: no-repeat;
     background-image: url(Images/Buttons/about_hover.fw.png);
-    width: 200px;
 }
 
 #navigation li#help{
-    background-repeat: no-repeat;
     background-image: url(Images/Buttons/help_idle.fw.png);
-    width: 200px;
 }
 
 #navigation li#help:hover
 {
-    background-repeat: no-repeat;
     background-image: url(Images/Buttons/help_hover.fw.png);
-    width: 200px;
 }
 
+#navigation li#login {
+    background-image: url(Images/Buttons/login_idle.fw.png);
+}
+
+#navigation li#login:hover {
+    background-image: url(Images/Buttons/login_hover.fw.png);
+}
 
 #navigation li#logo
 {
     background-repeat: no-repeat;
     background-image: url("Images/Logo.fw.png");
     width: 355px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.navigation
+{
+    width: 200px;
+    background-repeat: no-repeat;
+    transition: .2s background-image;
 }

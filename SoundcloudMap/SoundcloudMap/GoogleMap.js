@@ -54,13 +54,12 @@ function processGeocode(results)
         cities.push(xml.getElementsByTagName('name')[i].innerHTML + " " + xml.getElementsByTagName('adminCode1')[i].innerHTML);
     }
     
-    console.log(cities);
+    cityData(cities);
 }
 
 function createMap(position) {
     var currentPosLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    console.log(currentPosLatLng.toString());
-    geocodeByRadius(currentPosLatLng, radius);
+    //geocodeByRadius(currentPosLatLng, radius);
 
     map = new google.maps.Map(document.getElementById('google-map'),
     {

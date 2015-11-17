@@ -2,8 +2,8 @@ SC.initialize({
 	client_id: '92c4a7cc969806a86bb2004c626dfc99'
 });
 
-var favLimit = 20;
-var page_size = 50;
+var favLimit = 10;
+var page_size = 10;
 var tempUserId;
 var tempFavTrack;
 var trackExistsAlready;
@@ -18,47 +18,55 @@ var favorites = [];
 
 function cityData(sentCities) {
     cities = sentCities;
-    cities = ["Columbus, OH", "Springfield, OH", "Mansfield, OH", "Grove City, OH"];
     numCities = cities.length;
     processCityData(0);
 }
 
 var counter = 0;
+var firstCall = true;
 
 function processCityData(lastUsers) {
-    if (lastUsers != null) {
-        for (var j = 0; j < lastUsers.length; j++)
-        {
+    if (!firstCall) {
+        for (var j = 0; j < lastUsers.length; j++) {
             users.push(lastUsers[j]);
         }
-
-        if (counter < numCities) {
-            SC.get('/users', {
-                q: cities[counter],
-                limit: page_size
-            }
-	        ).then(processCityData);
+    }
+    else
+    {
+        firstCall = false;
+    }
+    if (counter < numCities) {
+        SC.get('/users', {
+          q: cities[counter],
+          limit: page_size
+       }).then(processCityData);
             counter++;
         }
         else {
             numUsers = users.length;
             parseUsers(0);
         }
-    }
 }
 
 var counter2 = 0;
+firstCall = true;
 
 function parseUsers(lastFavorites) {
-    if (lastFavorites.length != 0) {
+    if (!firstCall)
+    {
         for (var n = 0; n < lastFavorites.length; n++)
         {
             favorites.push(lastFavorites[n]);
         }
+    }
+    else
+    {
+        firstCall = false;
+    }
+
         if (counter2 < numUsers) {
             tempUserId = users[counter2].id;
-            SC.get('/users/' + tempUserId + '/favorites',
-                {limit: favLimit }
+            SC.get('/users/' + tempUserId + '/favorites'
                 ).then(parseUsers);
             counter2++;
         }
@@ -66,25 +74,13 @@ function parseUsers(lastFavorites) {
             parseFavorites();
         }
     }
-}
 
 function parseFavorites() {
-    var canAdd;
-    for (var k = 0; k < favorites.length; k++) {       
-        canAdd = true;
-        for(var q = 0; favorites[k].title != null && q < favoritesList.length && !canAdd; q++)
-        {
-            if(favoritesList[q] == favorites[k]){
-                favoritesCount[q] = favoritesCount[q] + 1;  
-                canAdd = false;
-            }
-        }            
-        if(canAdd && favorites[k].title != null)
-        {
-            favoritesList.push(favorites[k].title);
-            favoritesCount.push(1);
-        }       
+    var skipCount;
+    for (var i = 0; i < favorites.length; i++)
+    {
+        if (favorites[i].title.charAt(1) == favorites[favorites.length - 1].title.charAt(1))
+            console.log(favorites[i].title);
     }
-    console.log(favoritesList);
-    console.log(Math.max.apply(null,favoritesCount));
+    console.log('end!');
 }

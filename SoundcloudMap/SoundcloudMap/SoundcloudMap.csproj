@@ -80,6 +80,12 @@
     <Content Include="bin\SoundcloudMap.dll" />
     <Content Include="bin\SoundcloudMap.pdb" />
     <Content Include="GoogleMap.js" />
+    <Content Include="Images\Buttons\about_hover.fw.png" />
+    <Content Include="Images\Buttons\about_idle.fw.png" />
+    <Content Include="Images\Buttons\help_hover.fw.png" />
+    <Content Include="Images\Buttons\help_idle.fw.png" />
+    <Content Include="Images\Buttons\login_hover.fw.png" />
+    <Content Include="Images\Buttons\login_idle.fw.png" />
     <Content Include="Images\Buttons\settings_hover.fw.png" />
     <Content Include="Images\Buttons\settings_idle.fw.png" />
     <Content Include="Images\Logo.fw.png" />
