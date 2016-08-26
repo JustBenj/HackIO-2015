@@ -1,6 +1,8 @@
 # HackIO-2015
 Repository for OHI/O 2015.
 
+This project was intended to use data from SoundCloud's API in conjunction with Google Maps in order to show users the most popular SoundCloud tracks in their geographic region.
 
-Soundcloud Client ID: 92c4a7cc969806a86bb2004c626dfc99
-Google Maps API Key: AIzaSyDYLEutIswPcfl42HL4rCy2dK0mkCgJTY0
+Upon exploration of the SoundCloud API and available data for the region we were checking, it was found that there was not enough commonality amongst "liked" tracks in our test area to show any meaningful relationships.
+
+That being said, the project was a phenomenal exercise in learning and implementing new APIs as quickly as possible while brushing up on some JavaScript.
